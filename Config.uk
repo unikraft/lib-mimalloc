@@ -1,0 +1,16 @@
+menuconfig LIBMIMALLOC
+	bool "mimalloc: a compact general purpose allocator with excellent performance"
+	default n
+	select LIBUKSCHED
+	select LIBNEWLIBC
+	select LIBPOSIX_SYSINFO
+	select LIBPTHREAD_EMBEDDED
+	select LIBUKALLOCREGION
+if LIBMIMALLOC
+	config MIMALLOC_DEBUG
+		int "Debug level"
+		default 0
+	config MIMALLOC_ASSERT
+		bool "Enable assertions"
+		default n
+endif
