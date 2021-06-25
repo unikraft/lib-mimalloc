@@ -234,11 +234,13 @@ struct uk_alloc *uk_mimalloc_init(void *base, size_t len)
 	 * cases we want Mimalloc to be the default allocator.
 	 * FIXME: add uk_allocregion_init_noregister() that initializes a region
 	 * allocator without registering it.
+	 * FIXME: add support for maxalloc, availmem, and addmem.
 	 */
 	uk_alloc_init_malloc(a, uk_mimalloc_region_malloc, uk_calloc_compat,
 				uk_realloc_compat, uk_mimalloc_region_free,
 				uk_mimalloc_region_posix_memalign,
-				uk_memalign_compat, NULL);
+				uk_memalign_compat, NULL /* maxalloc */,
+				NULL /* availmem */, NULL /* addmem */);
 
 	__region_alloc = uk_allocregion_init((void *)((uintptr_t) base +
 						metalen), len - metalen);
