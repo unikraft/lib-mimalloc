@@ -1,3 +1,9 @@
+# Invisible option that is used to detect
+# if LIBMIMALLOC is available for configuration
+config LIBMIMALLOC_INCLUDED
+	   bool
+	   default y
+
 menuconfig LIBMIMALLOC
 	bool "mimalloc: a compact general purpose allocator with excellent performance"
 	default n
