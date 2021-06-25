@@ -6,7 +6,6 @@ Unikraft as an external library.
 
 How to use this allocator in your unikernel application:
 
-- apply main-tree.patch to the main tree
 - select "Mimalloc" in `ukboot > Default memory allocator`
 - pass at least 256MiB of memory to the unikernel
 
