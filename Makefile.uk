@@ -93,3 +93,10 @@ LIBMIMALLOC_SRCS-y += $(LIBMIMALLOC)/src/options.c
 LIBMIMALLOC_SRCS-y += $(LIBMIMALLOC)/src/init.c
 #LIBMIMALLOC_SRCS-y += $(LIBMIMALLOC)/src/alloc-override.c
 #LIBMIMALLOC_SRCS-y += $(LIBMIMALLOC)/src/page-queue.c
+
+################################################################################
+# Tests
+################################################################################
+ifneq ($(filter y, $(CONFIG_LIBMIMALLOC_TEST_API) $(CONFIG_LIBUKTEST_ALL)),)
+LIBMIMALLOC_SRCS-y += $(LIBMIMALLOC)/test/test-api.c
+endif
