@@ -1,0 +1,6 @@
+name        := "mimalloc"
+description := "A general purpose allocator with excellent performance characteristics."
+gitrepo     := "https://github.com/microsoft/mimalloc.git"
+homepage    := "https://github.com/microsoft/mimalloc/"
+license     := "MIT"
+version     := 1.6.1 sha256:7fe9b8f30cd25f8ea35dbb6539652bbf9ea44cb01865bac70a1c368f6b96c770 https://github.com/microsoft/mimalloc/archive/v1.6.1.tar.gz
