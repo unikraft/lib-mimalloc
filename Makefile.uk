@@ -39,7 +39,7 @@ $(eval $(call addlib_s,libmimalloc,$(CONFIG_LIBMIMALLOC)))
 ################################################################################
 # Sources
 ################################################################################
-LIBMIMALLOC_VERSION=1.6.1
+LIBMIMALLOC_VERSION=2.1.2
 LIBMIMALLOC_URL=https://github.com/microsoft/mimalloc/archive/v$(LIBMIMALLOC_VERSION).zip
 LIBMIMALLOC_DIR=mimalloc-$(LIBMIMALLOC_VERSION)
 
