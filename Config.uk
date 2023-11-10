@@ -19,4 +19,15 @@ if LIBMIMALLOC
 	config MIMALLOC_ASSERT
 		bool "Enable assertions"
 		default n
+	config LIBMIMALLOC_TEST
+		bool "Enable libmimalloc tests"
+		select LIBUKTEST
+		default n
+		help
+			Enables all libmimalloc tests.
+	if LIBMIMALLOC_TEST
+		config LIBMIMALLOC_TEST_API
+			bool "Enable libmimalloc api test suite"
+			default y
+	endif
 endif
